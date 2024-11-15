@@ -3,15 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Options</title>
+    <title>Engagement Ceremony - Kaushik & Sai Sobhana</title>
+    <style>
+        /* General styling for mobile compatibility and aesthetics */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        h1 {
+            color: #8B0000; /* Red Maroon color */
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .welcome-message {
+            color: #8B0000; /* Red Maroon color */
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .booking-option {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px 0;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .booking-option:hover {
+            background-color: #45a049;
+        }
+        /* Responsive font sizing */
+        @media (max-width: 600px) {
+            h1, .welcome-message {
+                font-size: 1.2em;
+            }
+            .booking-option {
+                font-size: 0.9em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Choose Your Booking Option</h1>
+    <h1>Welcome to the Engagement Ceremony of Kaushik & Sai Sobhana</h1>
+    <p class="welcome-message">Join us on 24th Nov (Sunday)</p>
+
+    <h2>Choose Your Booking Option</h2>
     <p>If you are coming in your vehicle, book here:</p>
-    <a href="https://maps.app.goo.gl/ar9XdqjowS7qvqQo7" target="_blank">Book Vehicle Option</a>
+    <a href="https://maps.app.goo.gl/ar9XdqjowS7qvqQo7" target="_blank" class="booking-option">Book Vehicle Option</a>
 
     <p>If you are taking an Uber, book here:</p>
-    <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=20.34346&dropoff[longitude]=85.88354" target="_blank">Book Uber Option</a>
+    <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=20.34346&dropoff[longitude]=85.88354" target="_blank" class="booking-option">Book Uber Option</a>
 </body>
 </html>
-
