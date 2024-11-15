@@ -45,9 +45,22 @@
         .booking-option:hover {
             background-color: #45a049;
         }
+        .footer {
+            margin-top: 30px;
+            font-size: 1em;
+            color: #555;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            color: #45a049;
+        }
         /* Responsive font sizing */
         @media (max-width: 600px) {
-            h1, .welcome-message, .countdown {
+            h1, .welcome-message, .countdown, .footer {
                 font-size: 1.2em;
             }
             .booking-option {
@@ -72,9 +85,14 @@
     <p>If you are taking an Uber, book here:</p>
     <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=20.34346&dropoff[longitude]=85.88354" target="_blank" class="booking-option">Book Uber Option</a>
 
+    <!-- Contact Us Section -->
+    <div class="footer">
+        <p>Contact Us: <a href="tel:+7978447935">7978447935</a></p>
+    </div>
+
     <script>
         // Set the date of the event
-        const eventDate = new Date("November 24, 2024 00:00:00").getTime();
+        const eventDate = new Date("November 24, 2024 11:00:00").getTime();
 
         // Update the countdown every 1 second
         const countdownInterval = setInterval(function() {
