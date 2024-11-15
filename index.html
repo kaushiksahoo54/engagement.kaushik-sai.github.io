@@ -27,6 +27,12 @@
             font-size: 1.2em;
             margin-bottom: 20px;
         }
+        .countdown {
+            font-size: 1.2em;
+            color: #333;
+            margin: 20px 0;
+            font-weight: bold;
+        }
         .booking-option {
             background-color: #4CAF50;
             color: white;
@@ -41,7 +47,7 @@
         }
         /* Responsive font sizing */
         @media (max-width: 600px) {
-            h1, .welcome-message {
+            h1, .welcome-message, .countdown {
                 font-size: 1.2em;
             }
             .booking-option {
@@ -54,11 +60,45 @@
     <h1>Welcome to the Engagement Ceremony of Kaushik & Sai Sobhana</h1>
     <p class="welcome-message">Join us on 24th Nov (Sunday)</p>
 
+    <!-- Countdown Timer -->
+    <div class="countdown" id="countdown">
+        Time left: <span id="days">0</span>d : <span id="hours">0</span>h : <span id="minutes">0</span>m : <span id="seconds">0</span>s
+    </div>
+
     <h2>Choose Your Booking Option</h2>
-    <p>If you are coming in your vehicle, book here:</p>
+    <p>If you are coming in your vehicle, maps location :</p>
     <a href="https://maps.app.goo.gl/ar9XdqjowS7qvqQo7" target="_blank" class="booking-option">Google Maps Location</a>
 
     <p>If you are taking an Uber, book here:</p>
     <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=20.34346&dropoff[longitude]=85.88354" target="_blank" class="booking-option">Book Uber Option</a>
+
+    <script>
+        // Set the date of the event
+        const eventDate = new Date("November 24, 2024 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const timeRemaining = eventDate - now;
+
+            // Calculate days, hours, minutes, and seconds remaining
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            // Display the result
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+            // If the countdown is over, display a message
+            if (timeRemaining < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "The ceremony has started!";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
