@@ -138,8 +138,6 @@
             document.getElementById("hours").innerText = hours;
             document.getElementById("minutes").innerText = minutes;
             document.getElementById("seconds").innerText = seconds;
-
-            // If the countdown is over, display a message
             if (timeRemaining < 0) {
                 clearInterval(countdownInterval);
                 document.getElementById("countdown").innerHTML = "The ceremony has started!";
