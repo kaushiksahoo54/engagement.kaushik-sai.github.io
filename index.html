@@ -15,16 +15,17 @@
             align-items: center;
             text-align: center;
             background-image: url('image3.jpg');
-            background-size: cover; /* Ensures image covers the entire screen */
-            background-position: center center; /* Centers the image */
-            background-attachment: fixed; /* Fixes the image as the user scrolls */
-            color: #FFFFFF; /* White text */
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #FFFFFF;
             padding: 20px;
             overflow: hidden;
             position: relative;
-            min-height: 100vh; /* Ensure full viewport height */
+            min-height: 100vh;
         }
-        /* Overlay to darken the background image */
+
+        /* Moderately dark overlay for the background */
         body::before {
             content: "";
             position: absolute;
@@ -32,12 +33,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+            background-color: rgba(0, 0, 0, 0.6); /* Moderate overlay */
             z-index: -1;
         }
+
         h1, .welcome-message, .countdown, h2, p, .footer {
-            color: #FFFFFF; /* Ensure all text elements are white */
+            color: #FFFFFF;
         }
+
         h1 {
             font-size: 1.5em;
             margin-bottom: 10px;
@@ -45,6 +48,7 @@
             padding: 10px;
             border-radius: 8px;
         }
+
         .welcome-message {
             font-size: 1.2em;
             margin-bottom: 20px;
@@ -52,6 +56,7 @@
             padding: 5px;
             border-radius: 5px;
         }
+
         .countdown {
             font-size: 1.2em;
             margin: 20px 0;
@@ -60,8 +65,9 @@
             padding: 10px;
             border-radius: 5px;
         }
+
         .booking-option {
-            background-color: rgba(76, 175, 80, 0.8); /* Slightly transparent */
+            background-color: rgba(76, 175, 80, 0.8);
             color: white;
             padding: 10px 20px;
             margin: 10px 0;
@@ -69,10 +75,12 @@
             border-radius: 5px;
             display: inline-block;
         }
+
         .booking-option:hover {
             background-color: rgba(255, 255, 255, 0.8);
             color: #333;
         }
+
         .footer {
             margin-top: 30px;
             font-size: 1em;
@@ -80,16 +88,23 @@
             padding: 5px;
             border-radius: 5px;
         }
+
         .footer a {
             color: #4CAF50;
             text-decoration: none;
             font-weight: bold;
         }
+
         .footer a:hover {
             color: #45a049;
         }
-        /* Responsive font sizing */
+
+        /* Responsive styling adjustments for mobile screens */
         @media (max-width: 600px) {
+            body {
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
             h1, .welcome-message, .countdown, .footer {
                 font-size: 1.2em;
             }
@@ -110,7 +125,7 @@
 
     <h2>Choose Your Booking Option</h2>
     <p>If you are coming in your vehicle, maps location:</p>
-    <a href="https://maps.app.goo.gl/1uowxqfV4o5an9XV9" target="_blank" class="booking-option">Google Maps Location</a>
+    <a href="https://maps.app.goo.gl/7YAaJ9xKuAf3CfU38" target="_blank" class="booking-option">Google Maps Location</a>
 
     <p>If you are taking an Uber, book here:</p>
     <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=20.35678693284386&dropoff[longitude]=85.88848505203536" target="_blank" class="booking-option">Book Uber Option</a>
