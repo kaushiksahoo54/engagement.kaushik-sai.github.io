@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engagement Ceremony - Kaushik & Sai Sobhana</title>
+    <title>Ring Ceremony - Kaushik & Sai Sobhana</title>
     <style>
+        /* General styling for mobile compatibility and aesthetics */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,14 +14,15 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            background-image: url('image1.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-image: url('image3.jpg');
+            background-size: cover; /* Ensures image covers the entire screen */
+            background-position: center center; /* Centers the image */
+            background-attachment: fixed; /* Fixes the image as the user scrolls */
             color: #FFFFFF; /* White text */
             padding: 20px;
             overflow: hidden;
             position: relative;
+            min-height: 100vh; /* Ensure full viewport height */
         }
         /* Overlay to darken the background image */
         body::before {
@@ -98,8 +100,8 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to the Engagement Ceremony of Kaushik & Sai Sobhana</h1>
-    <p class="welcome-message">Join us on 24th Nov (Sunday)</p>
+    <h1>Welcome to the Ring Ceremony of Kaushik & Sai Sobhana</h1>
+    <p class="welcome-message">Join us on 27th of Nov (Wednesday)</p>
 
     <!-- Countdown Timer -->
     <div class="countdown" id="countdown">
@@ -108,10 +110,10 @@
 
     <h2>Choose Your Booking Option</h2>
     <p>If you are coming in your vehicle, maps location:</p>
-    <a href="https://maps.app.goo.gl/ar9XdqjowS7qvqQo7" target="_blank" class="booking-option">Google Maps Location</a>
+    <a href="https://maps.app.goo.gl/1uowxqfV4o5an9XV9" target="_blank" class="booking-option">Google Maps Location</a>
 
     <p>If you are taking an Uber, book here:</p>
-    <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=20.34346&dropoff[longitude]=85.88354" target="_blank" class="booking-option">Book Uber Option</a>
+    <a href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=20.35678693284386&dropoff[longitude]=85.88848505203536" target="_blank" class="booking-option">Book Uber Option</a>
 
     <!-- Contact Us Section -->
     <div class="footer">
@@ -120,7 +122,7 @@
 
     <script>
         // Set the date of the event
-        const eventDate = new Date("November 24, 2024 11:00:00").getTime();
+        const eventDate = new Date("November 27, 2024 11:00:00").getTime();
 
         // Update the countdown every 1 second
         const countdownInterval = setInterval(function() {
@@ -138,6 +140,8 @@
             document.getElementById("hours").innerText = hours;
             document.getElementById("minutes").innerText = minutes;
             document.getElementById("seconds").innerText = seconds;
+
+            // If the countdown is over, display a message
             if (timeRemaining < 0) {
                 clearInterval(countdownInterval);
                 document.getElementById("countdown").innerHTML = "The ceremony has started!";
