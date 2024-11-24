@@ -15,12 +15,11 @@
             align-items: center;
             text-align: center;
             background-image: url('image3.jpg');
-            background-size: cover;
+            background-size: cover; /* Ensures the image always covers the viewport */
             background-position: center center;
             background-attachment: fixed;
             color: #FFFFFF;
             padding: 20px;
-            overflow: hidden;
             position: relative;
             min-height: 100vh;
         }
@@ -97,20 +96,6 @@
 
         .footer a:hover {
             color: #45a049;
-        }
-
-        /* Responsive styling adjustments for mobile screens */
-        @media (max-width: 600px) {
-            body {
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            h1, .welcome-message, .countdown, .footer {
-                font-size: 1.2em;
-            }
-            .booking-option {
-                font-size: 0.9em;
-            }
         }
     </style>
 </head>
